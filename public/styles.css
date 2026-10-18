@@ -36,7 +36,7 @@ ul.list li+li{margin-top:6px}
 .topbar a{color:#fff;text-decoration:none;font-weight:600}
 .topbar span+span{margin-left:18px}
 @media(max-width:760px){.topbar .hide-sm{display:none}.topbar .container{justify-content:center}}
-.site-header{background:#fff;position:sticky;top:0;z-index:30;border-bottom:1px solid var(--line);box-shadow:0 2px 12px rgba(0,0,0,.05)}
+.site-header{background:linear-gradient(rgba(255,255,255,.35),rgba(255,255,255,.35)),url("/img/metal-panel-texture.webp") center 30%/cover;position:sticky;top:0;z-index:30;border-bottom:3px solid var(--red);box-shadow:0 2px 12px rgba(0,0,0,.08)}
 .site-header .container{display:flex;align-items:center;justify-content:space-between;height:82px;gap:16px}
 .logo img{height:64px;width:auto}
 .nav{display:flex;align-items:center;gap:24px}

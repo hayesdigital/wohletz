@@ -125,7 +125,7 @@ def head(title, desc, path, schema=(), og_image=OG_DEFAULT, og_alt="Wohletz Roof
   <div><span class="hide-sm">{HOURS}</span><span><a href="tel:{PHONE_TEL}">Call {PHONE}</a></span></div>
 </div></div>
 <header class="site-header"><div class="container">
-  <a class="logo" href="/" aria-label="{NAME} home"><img src="/img/wohletz-roofing-construction-logo.webp" width="500" height="300" alt="Wohletz Roofing and Construction logo, Ponca City OK, since 1994"></a>
+  <a class="logo" href="/" aria-label="{NAME} home"><img src="/img/wohletz-logo-transparent.webp" width="375" height="225" alt="Wohletz Roofing and Construction logo, Ponca City OK, since 1994"></a>
   <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav">{ICO["menu"]}</button>
   <nav class="nav" id="nav" aria-label="Main">
     {nav}
