@@ -19,6 +19,7 @@ MAP_EMBED = ("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3793.7024561
              "!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b0f51e6ca72883%3A0x659a18edae5fc5bd!2sWohletz%20Roofing%20%26%20Construction!5e1!3m2!1sen!2sus!4v1762207207903!5m2!1sen!2sus")
 TOWNS = ["Ponca City", "Blackwell", "Tonkawa", "Newkirk", "Kaw City", "McCord", "Fairfax", "Shidler"]
 YEAR_FOUNDED = 1994
+GA4 = "G-EKZNGQFR8Z"  # Google Analytics 4 property carried over from the GHL site
 
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
          '<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">')
@@ -116,6 +117,8 @@ def head(title, desc, path, schema=(), og_image=OG_DEFAULT, og_alt="Wohletz Roof
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
 {FONTS}
 <link rel="stylesheet" href="/styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id={GA4}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","{GA4}");</script>
 {ld}
 </head>
 <body>
@@ -176,7 +179,8 @@ FOOT = f"""<footer class="site-footer"><div class="container">
 <script>
 (function(){{var b=document.querySelector(".menu-btn"),n=document.getElementById("nav");if(b)b.addEventListener("click",function(){{var o=n.classList.toggle("open");b.setAttribute("aria-expanded",o)}});
 document.querySelectorAll(".next-url").forEach(function(i){{i.value=location.origin+"/thank-you/"}});
-document.querySelectorAll(".page-url").forEach(function(i){{i.value=location.href}});}})();
+document.querySelectorAll(".page-url").forEach(function(i){{i.value=location.href}});
+if(location.pathname==="/thank-you/"&&window.gtag)gtag("event","generate_lead");}})();
 </script>
 </body>
 </html>
