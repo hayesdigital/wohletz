@@ -245,7 +245,8 @@ def hero(h1, small, lead, bullets, img, img_alt, form_html, eyebrow, crumbs=None
     <div>
       {cr}
       <span class="eyebrow">{eyebrow}</span>
-      <h1>{h1}<small>{small}</small></h1>
+      <h1>{h1}</h1>
+      <p class="h1-sub">{small}</p>
       <p class="lead">{lead}</p>
       <ul class="checks">{lis}</ul>
       <div class="hero-ctas"><a class="btn" href="tel:{PHONE_TEL}">{ICO["phone"]} Call {PHONE}</a><a class="btn ghost" href="{SMS}">{ICO["text"]} Text Us</a></div>
@@ -675,7 +676,8 @@ about = head("About Wohletz Roofing &amp; Construction | Ponca City Roofer Since
   <div class="container">
     <p class="crumbs"><a href="/">Home</a> / About</p>
     <span class="eyebrow">About us</span>
-    <h1>About Wohletz Roofing &amp; Construction<small>Family owned. Locally trusted. Quality driven.</small></h1>
+    <h1>About Wohletz Roofing &amp; Construction</h1>
+    <p class="h1-sub">Family owned. Locally trusted. Quality driven.</p>
     <p class="lead">We're more than a roofing company. We're your neighbors, and we take protecting your biggest investments personally.</p>
   </div>
 </section>
@@ -738,7 +740,8 @@ area = head("Roofing &amp; Steel Buildings Service Area | Ponca City, Blackwell,
   <div class="container">
     <p class="crumbs"><a href="/">Home</a> / Service Area</p>
     <span class="eyebrow">Service area</span>
-    <h1>Roofing &amp; Steel Buildings Across North Central Oklahoma<small>Based in Ponca City since 1994</small></h1>
+    <h1>Roofing &amp; Steel Buildings Across North Central Oklahoma</h1>
+    <p class="h1-sub">Based in Ponca City since 1994</p>
     <p class="lead">From town homes to farms out on the county roads, we're glad to make the drive.</p>
     <div class="hero-ctas"><a class="btn" href="tel:{PHONE_TEL}">{ICO["phone"]} Call {PHONE}</a><a class="btn ghost" href="/contact-us/#quote">Free Estimate</a></div>
   </div>
@@ -767,7 +770,8 @@ contact = head("Contact Wohletz Roofing &amp; Construction | Free Estimate Ponca
     <div>
       <p class="crumbs"><a href="/">Home</a> / Contact</p>
       <span class="eyebrow">Contact us</span>
-      <h1>Let's Get Your Project Started<small>Free estimates in Ponca City &amp; North Central Oklahoma</small></h1>
+      <h1>Let's Get Your Project Started</h1>
+      <p class="h1-sub">Free estimates in Ponca City &amp; North Central Oklahoma</p>
       <p class="lead">Roofing question? Need a price on a new steel building? We're here to help. Call, text, email or fill out the form, and we'll get back to you as soon as possible.</p>
       <ul class="checks">
         <li>Call: <a href="tel:{PHONE_TEL}" style="color:#fff;font-weight:700">{PHONE}</a></li>
