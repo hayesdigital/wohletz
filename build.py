@@ -182,7 +182,9 @@ FOOT = f"""<footer class="site-footer"><div class="container">
 (function(){{var b=document.querySelector(".menu-btn"),n=document.getElementById("nav");if(b)b.addEventListener("click",function(){{var o=n.classList.toggle("open");b.setAttribute("aria-expanded",o)}});
 document.querySelectorAll(".next-url").forEach(function(i){{i.value=location.origin+"/thank-you/"}});
 document.querySelectorAll(".page-url").forEach(function(i){{i.value=location.href}});
-if(location.pathname==="/thank-you/"&&window.gtag)gtag("event","generate_lead");}})();
+if(location.pathname==="/thank-you/"&&window.gtag)gtag("event","generate_lead");
+var desk=!/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)&&!(window.matchMedia&&matchMedia("(pointer:coarse)").matches);
+document.querySelectorAll('a[href^="sms:"]').forEach(function(a){{a.addEventListener("click",function(e){{if(window.gtag)gtag("event","text_click");if(!desk)return;e.preventDefault();if(a.classList.contains("btn")){{var t=a.lastChild;if(t&&t.nodeType===3)t.nodeValue=" Text {PHONE}";else a.append(" Text {PHONE}");}}}})}});}})();
 </script>
 </body>
 </html>
