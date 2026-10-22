@@ -879,3 +879,7 @@ PAGES = ["/", "/roofing/", "/roof-repair/", "/steel-buildings/", "/about/", "/se
 # Old GoHighLevel URLs -> new pages
 (ROOT / "_redirects").write_text("/home / 301\n/home/ / 301\n/contact /contact-us/ 301\n/roofing-services /roofing/ 301\n/steel-building /steel-buildings/ 301\n")
 print("built", len(PAGES) + 2, "pages")
+
+# IndexNow key file (Bing, Yandex and other IndexNow engines)
+INDEXNOW_KEY = "30a53187beae0ab2168d3487d8b216fc"
+(ROOT / f"{INDEXNOW_KEY}.txt").write_text(INDEXNOW_KEY)
