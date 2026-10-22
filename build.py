@@ -7,6 +7,7 @@ SITE = "https://wohletzroofingandconstruction.com"
 NAME = "Wohletz Roofing & Construction"
 PHONE = "(580) 716-0113"
 PHONE_TEL = "+15807160113"
+SMS = "sms:+15807160113"
 EMAIL = "info@wohletzroofingandconstruction.com"
 FORM_TO = "info@wohletzroofingandconstruction.com"   # FormSubmit primary recipient
 FORM_CC = "wohletztyler711@gmail.com"                # copy of every quote request
@@ -58,6 +59,7 @@ NAV = [("/roofing/", "Roofing"), ("/roof-repair/", "Roof Repair"), ("/steel-buil
 
 ICO = {
  "phone": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>',
+ "text": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg>',
  "roof": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12 12 3l10 9"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>',
  "storm": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 17H7a5 5 0 1 1 1.1-9.9A6 6 0 0 1 19.6 9 4 4 0 0 1 17.5 17z"/><path d="m12 13-2 4h4l-2 4"/></svg>',
  "shield": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>',
@@ -246,7 +248,7 @@ def hero(h1, small, lead, bullets, img, img_alt, form_html, eyebrow, crumbs=None
       <h1>{h1}<small>{small}</small></h1>
       <p class="lead">{lead}</p>
       <ul class="checks">{lis}</ul>
-      <div class="hero-ctas"><a class="btn" href="tel:{PHONE_TEL}">{ICO["phone"]} Call {PHONE}</a></div>
+      <div class="hero-ctas"><a class="btn" href="tel:{PHONE_TEL}">{ICO["phone"]} Call {PHONE}</a><a class="btn ghost" href="{SMS}">{ICO["text"]} Text Us</a></div>
     </div>
     {form_html}
   </div>
@@ -766,13 +768,15 @@ contact = head("Contact Wohletz Roofing &amp; Construction | Free Estimate Ponca
       <p class="crumbs"><a href="/">Home</a> / Contact</p>
       <span class="eyebrow">Contact us</span>
       <h1>Let's Get Your Project Started<small>Free estimates in Ponca City &amp; North Central Oklahoma</small></h1>
-      <p class="lead">Roofing question? Need a price on a new steel building? We're here to help. Call, email or fill out the form, and we'll get back to you as soon as possible.</p>
+      <p class="lead">Roofing question? Need a price on a new steel building? We're here to help. Call, text, email or fill out the form, and we'll get back to you as soon as possible.</p>
       <ul class="checks">
-        <li>Phone: <a href="tel:{PHONE_TEL}" style="color:#fff;font-weight:700">{PHONE}</a></li>
+        <li>Call: <a href="tel:{PHONE_TEL}" style="color:#fff;font-weight:700">{PHONE}</a></li>
+        <li>Text: <a href="{SMS}" style="color:#fff;font-weight:700">{PHONE}</a></li>
         <li>Email: <a href="mailto:{EMAIL}" style="color:#fff">{EMAIL}</a></li>
         <li>Office: {STREET}, {CITY}, {REGION} {ZIP}</li>
         <li>Hours: {HOURS}. Sunday closed.</li>
       </ul>
+      <div class="hero-ctas"><a class="btn" href="tel:{PHONE_TEL}">{ICO["phone"]} Call {PHONE}</a><a class="btn ghost" href="{SMS}">{ICO["text"]} Text Us</a></div>
     </div>
     {form(fid="contact")}
   </div>
